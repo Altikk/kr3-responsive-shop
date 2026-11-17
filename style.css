@@ -16,13 +16,13 @@ html, body {
     min-height: 100dvh;
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(images/background.jpg) center / cover no-repeat fixed;
+        url(images/background.webp) center / cover no-repeat fixed;
 }
 
 .header {
     position: sticky;
     top: 0;
-    z-index: 100%;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,8 +134,18 @@ html, body {
 }
 
 .footer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
     background-color: black;
     color: white;
-    height: 10vh;
-    display: flex;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.footer a {
+    color: white;
+    padding-bottom: 10px;
 }
