@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Каталог МортиШоп: Морти на любой вкус и в любой вселенной">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Каталог — МортиШоп</title>
+    <link rel="icon" href="images/Logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="catalog.css">
 </head>
 <body>
-    
+    <div class="background">
+
+        <header class="header">
+            <div>
+                <a href="index.html">
+                    <img src="images/Logo.png" alt="МортиШоп — на главную" class="logo">
+                </a>
+            </div>
+
+            <input type="checkbox" id="menu_check" class="menu_check">
+            <label for="menu_check" class="menu_toggle" aria-label="Открыть меню">☰</label>
+
+            <nav class="header_buttons">
+                <a href="catalog.html">Каталог</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </header>
+
+        <main class="catalog_page">
+            <h1>Каталог</h1>
+            <p class="catalog_lead">Выберите своего Морти. Доставка через портал — бесплатно.</p>
+
+            <section class="catalog_grid">
+                <article class="product">
+                    <img src="images/Mortys/Morty.webp" alt="Классический Морти в жёлтой футболке">
+                    <h2>Классический Морти</h2>
+                    <p class="price">500 ₽</p>
+                    <button type="button" aria-label="Купить: Классический Морти">Купить</button>
+                </article>
+
+                <article class="product">
+                    <img src="images/Mortys/MortyPuppetMortyFront.png" alt="Морти с носком-куклой на руке">
+                    <h2>Морти с куклой</h2>
+                    <p class="price">650 Bl</p>
+                    <button type="button" aria-label="Купить: Морти с куклой">Купить</button>
+                </article>
+
+                <article class="product">
+                    <img src="images/Mortys/Spoooky_Morty.webp" alt="Морти, накрытый простынёй с отверстиями для глаз">
+                    <h2>Пугающий Морти</h2>
+                    <p class="price">750 Bl</p>
+                    <button type="button" aria-label="Купить: Пугающий Морти">Купить</button>
+                </article>
+
+                <article class="product">
+                    <img src="images/Mortys/Scruffy_Morty.webp" alt="Морти в потрёпанной одежде">
+                    <h2>Грязный Морти</h2>
+                    <p class="price">300 Bl</p>
+                    <button type="button" aria-label="Купить: Грязный Морти">Купить</button>
+                </article>
+
+                <article class="product">
+                    <img src="images/Mortys/NikolayAnatolievichMorty.png" alt="Николай Анатольевич Морти">
+                    <h2>Николай Анатольевич Морти</h2>
+                    <p class="price">1200 Bl</p>
+                    <button type="button" aria-label="Купить: Николай Анатольевич Морти">Купить</button>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <a href="catalog.html">Каталог</a>
+            <a href="contacts.html">Контакты</a>
+            Учебный проект выполнен в рамках дисциплины "Фронтенд и бэкенд разработка"
+        </footer>
+    </div>
 </body>
 </html>
