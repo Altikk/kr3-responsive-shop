@@ -40,6 +40,57 @@ html, body {
     height: 10vh;
 }
 
+.menu_check {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu_toggle {
+    display: none;
+    font-size: 28px;
+    padding: 4px 14px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header_buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.header_buttons a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .menu_toggle {
+        display: block;
+    }
+
+    .header_buttons {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 0 5px;
+    }
+
+    .menu_check:checked ~ .header_buttons {
+        display: flex;
+    }
+
+    .menu_check:focus-visible + .menu_toggle {
+        outline: 3px solid #97ce4c;
+    }
+}
+
 .hero_section {
     color: white;
     font-family: 'Courier New', Courier, monospace;
@@ -131,6 +182,92 @@ html, body {
     object-fit: contain;
     flex: 1;
     width: 100%;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.feature {
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+}
+
+.faq {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.faq h2 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 24px;
+}
+
+.faq details {
+    margin-bottom: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.faq details:hover {
+    border-color: #97ce4c;
+}
+
+.faq details[open] {
+    border-color: #97ce4c;
+    box-shadow: 0 0 15px rgba(151, 206, 76, 0.5);
+}
+
+.faq summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;                 
+}
+
+.faq summary::after {
+    content: "+";
+    font-size: 1.6rem;
+    color: #97ce4c;
+    flex-shrink: 0;
+}
+
+.faq details[open] summary::after {
+    content: "−";
+}
+
+.faq summary:focus-visible {
+    outline: 3px solid #97ce4c;
+    outline-offset: 3px;
+    border-radius: 15px;
+}
+
+.faq details p {
+    padding: 0 20px 18px;
+    line-height: 1.5;
 }
 
 .footer {
