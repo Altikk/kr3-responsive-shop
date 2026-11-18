@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Контакты магазина Mortyshop">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MortyShop - Контакты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <header class="header">
+                <div>
+                    <a href="index.html">
+                        <img src="images/Logo.png" alt="Логотип магазина МортиШоп" class="logo">
+                    </a>
+                </div>
+                
+                <input type="checkbox" id="menu_check" class="menu_check">
+                <label for="menu_check" class="menu_toggle" aria-label="Открыть меню">☰</label>
+
+                <nav class="header_buttons">
+                    <a href="catalog.html">Каталог</a>
+                    <a href="contacts.html">Контакты</a>
+                </nav>
+        </header>
+
+            <main class="contacts_page">
+                <h1>Контакты</h1>
+
+                <div class="contacts_layout">
+
+                    <section class="contacts_info">
+                        <h2>Как нас найти</h2>
+                        <address>
+                            <p>📍 Земля C-137, улица Портальная, 1</p>
+                            <p>📞 <a href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+                            <p>✉️ <a href="mailto:hello@mortyshop.example">hello@mortyshop.example</a></p>
+                        </address>
+                        <h3>Часы работы</h3>
+                        <p>Пн–Пт: 10:00–20:00<br>Сб–Вс: 11:00–18:00</p>
+                    </section>
+
+                    <section class="contacts_form">
+                        <h2>Заказать Морти</h2>
+                        <form action="#" method="post">
+                            <div class="field">
+                                <label for="name">Ваше имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="field">
+                                <label for="morty">Какой Морти нужен?</label>
+                                <select id="morty" name="morty">
+                                    <option>Классический Морти</option>
+                                    <option>Пугающий Морти</option>
+                                    <option>Грязный Морти</option>
+                                    <option>Николай Анатольевич Морти</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="comment">Комментарий</label>
+                                <textarea id="comment" name="comment" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="catalog_button">Отправить</button>
+                        </form>
+                    </section>
+
+                </div>
+            </main>
+
+        <footer class="footer">
+            <a href="catalog.html">Каталог</a>
+            <a href="contacts.html">Контакты</a>
+            Учебный проект выполнен в рамках дисциплины "Фронтенд и бэкенд разбработка"
+        </footer>
+    </div>
+</body>
+</html>

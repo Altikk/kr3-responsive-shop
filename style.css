@@ -12,7 +12,13 @@ html, body {
   scroll-behavior: smooth;
 }
 
+main {
+    flex: 1;
+}
+
 .background {
+    display: flex;
+    flex-direction: column;
     min-height: 100dvh;
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -285,4 +291,72 @@ html, body {
 .footer a {
     color: white;
     padding-bottom: 10px;
+}
+
+.contacts_page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contacts_page h1 {
+    font-size: clamp(2rem, 7vw, 4rem);
+    margin-bottom: 30px;
+}
+
+.contacts_layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.contacts_info,
+.contacts_form {
+    padding: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+}
+
+.contacts_info h2,
+.contacts_form h2 { margin-bottom: 16px; }
+
+.contacts_info address { font-style: normal; line-height: 1.8; }
+.contacts_info h3 { margin-top: 20px; }
+
+.contacts_info a { color: #97ce4c; }
+
+.contacts_form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    color: black;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+    outline: 3px solid #97ce4c;
+}
+
+.contacts_form button {
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
 }
